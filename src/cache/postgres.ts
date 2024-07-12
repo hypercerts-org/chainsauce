@@ -49,7 +49,7 @@ const migration = `
         toBlock
         INTEGER
     );
-    CREATE INDEX IF NOT EXISTS idx_events ON "$1"."events" (chainId, address, blockNumber, name, params, transactionHash, logIndex);
+    CREATE INDEX IF NOT EXISTS idx_events ON "$1"."events" (chainId, address, blockNumber, name, transactionHash, logIndex);
     CREATE INDEX IF NOT EXISTS idx_logranges_search ON "$1"."logRanges" (chainId, address, fromBlock, toBlock);
     CREATE TABLE IF NOT EXISTS "$1"."contractReads"
     (
