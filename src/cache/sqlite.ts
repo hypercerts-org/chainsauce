@@ -77,7 +77,7 @@ function initSqliteConnection(dbPath: string) {
 
     db.exec(
         `CREATE INDEX IF NOT EXISTS idx_events
-            ON events (chainId, address, blockNumber, name, params, transactionHash, logIndex);`
+            ON events (chainId, address, blockNumber, name, transactionHash, logIndex);`
     );
 
     db.exec(
